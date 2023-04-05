@@ -2,7 +2,7 @@
 
 ## Tech Stack
 
-NodeJs, Express, MySQL 
+NodeJs, Express, mongodb 
 
 <br/><br/>
 
