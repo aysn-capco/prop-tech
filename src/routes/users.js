@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 const User = require('./models/User');
 
@@ -51,8 +52,8 @@ router.delete('/users/:id', async (req, res) => {
     const user = await User.findByPk(req.params.id);
     if (!user) throw new Error('User not found');
     await user.destroy();
-    res.json({ message});
-} catch (error) {
+    res.json({ message });
+  } catch (error) {
     res.status(404).json({ message: error.message });
   }
 });

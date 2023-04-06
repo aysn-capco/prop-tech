@@ -79,10 +79,13 @@ router.put('/:id', async (req, res, next) => {
       return next();
     }
 
-    const updatedEmployee = await employees.update({
-      _id: id,
-    }, { $set: result },
-    { upsert: true });
+    const updatedEmployee = await employees.update(
+      {
+        _id: id,
+      },
+      { $set: result },
+      { upsert: true },
+    );
 
     res.json(updatedEmployee);
   } catch (error) {

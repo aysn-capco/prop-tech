@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "lint": "eslint --fix --ext .js,.ts ./src/."
   },
   "dependencies": {
     "dotenv": "^16.0.3",
@@ -14,6 +15,8 @@
     "sequelize": "^6.30.0"
   },
   "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb": "^19.0.4",
     "nodemon": "^2.0.19"
   }
 }
